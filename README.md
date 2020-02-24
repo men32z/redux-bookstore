@@ -7,7 +7,7 @@ You can find the original project specification at: [here](https://github.com/mi
 
 ## Live Version
 
-[here]()
+[here](https://men32z-redux-bookstore.herokuapp.com/)
 
 ## Local Install
 

@@ -16,3 +16,5 @@ const Book = ({id, title, category}) => {
     </tr>
   )
 }
+
+export default Book;

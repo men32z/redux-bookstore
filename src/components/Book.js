@@ -20,11 +20,11 @@ Book.defaultProps = {
 };
 
 Book.propTypes = {
-  book: {
+  book: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
     category: PropTypes.string,
-  },
+  }),
 };
 
 export default Book;

@@ -19,4 +19,9 @@ const defaultProps = {
 
 const store = createStore(rootReducer, defaultProps);
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+const wrappedApp = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+ReactDOM.render(wrappedApp, document.getElementById('root'));

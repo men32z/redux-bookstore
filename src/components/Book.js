@@ -7,7 +7,8 @@ class Book extends React.Component {
     this.handleRemoveBook = this.handleRemoveBook.bind(this);
   }
 
-  handleRemoveBook() {
+  handleRemoveBook(e) {
+    e.preventDefault();
     const { book: { id, title, category }, removeBook } = this.props;
     return removeBook({ id, title, category });
   }
@@ -15,20 +16,20 @@ class Book extends React.Component {
   render() {
     const { book: { id, title, category } } = this.props;
     return (
-      <tr>
-        <td>
+      <div className="book">
+        <span>
           {id}
-        </td>
-        <td>
+        </span>
+        <span>
           {title}
-        </td>
-        <td>
+        </span>
+        <span>
           {category}
-        </td>
-        <td>
-          <button onClick={this.handleRemoveBook} type="button">x</button>
-        </td>
-      </tr>
+        </span>
+        <span>
+          <a href="#" onClick={this.handleRemoveBook} type="button">Remove</a>
+        </span>
+      </div>
     );
   }
 }

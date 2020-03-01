@@ -13,19 +13,7 @@ const BookList = ({
   return (
     <div>
       <CategoryFilter setFilter={setFilter} filter={filter} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksMap}
-        </tbody>
-      </table>
+      {booksMap}
     </div>
   );
 };

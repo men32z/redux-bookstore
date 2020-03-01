@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
+import categories from '../data/categories';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -31,8 +32,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const options = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi']
-      .map(x => <option key={x} value={x}>{x}</option>);
+    const options = categories.map(x => <option key={x} value={x}>{x}</option>);
     const { title, category } = this.state;
     return (
       <div>

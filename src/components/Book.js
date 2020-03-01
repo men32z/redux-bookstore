@@ -19,19 +19,19 @@ class Book extends React.Component {
       <div className="book">
         <div className="data">
           <div className="book-data">
-            <span style={{display:'none'}}>
+            <span style={{ display: 'none' }}>
               {id}
             </span>
             <span className="book-category">
               {category}
             </span>
             <span className="book-title">
-            {title}
+              {title}
             </span>
           </div>
           <div className="links">
             <span>
-              <a href="#" onClick={this.handleRemoveBook} type="button">Remove</a>
+              <a href="/#" onClick={this.handleRemoveBook} type="button">Remove</a>
             </span>
           </div>
         </div>

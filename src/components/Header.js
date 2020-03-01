@@ -4,17 +4,17 @@ function Header() {
   return (
     <div className="header">
       <div className="container">
-        <h1 className="title" >Bookstore CMS</h1>
+        <h1 className="title">Bookstore CMS</h1>
         <ul>
           <li>
-            <a href="#">BOOKS</a>
+            <a href="/#">BOOKS</a>
           </li>
           <li>
-            <a href="#">CATEGORIES</a>
+            <a href="/#">CATEGORIES</a>
           </li>
         </ul>
         <div className="oval">
-          <img src="user.png" alt="user"/>
+          <img src="user.png" alt="user" />
         </div>
       </div>
     </div>

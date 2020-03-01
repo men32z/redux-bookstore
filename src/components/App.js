@@ -9,6 +9,7 @@ function App() {
       <Header />
       <div className="container">
         <BookList />
+        <div className="line" />
         <BooksForm />
       </div>
     </div>

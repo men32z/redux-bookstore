@@ -19,7 +19,8 @@ class BooksForm extends React.Component {
     this.setState({ [id]: value });
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     const { title, category } = this.state;
     const { addBook } = this.props;
     if (title) {
@@ -35,11 +36,13 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div>
-        <input id="title" onChange={this.handleChange} value={title} />
-        <select id="category" onChange={this.handleChange} value={category}>
-          {options}
-        </select>
-        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+        <form onSubmit={this.handleSubmit}>
+          <input id="title" onChange={this.handleChange} value={title} required />
+          <select id="category" onChange={this.handleChange} value={category}>
+            {options}
+          </select>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     );
   }

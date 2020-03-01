@@ -17,18 +17,24 @@ class Book extends React.Component {
     const { book: { id, title, category } } = this.props;
     return (
       <div className="book">
-        <span>
-          {id}
-        </span>
-        <span>
-          {title}
-        </span>
-        <span>
-          {category}
-        </span>
-        <span>
-          <a href="#" onClick={this.handleRemoveBook} type="button">Remove</a>
-        </span>
+        <div className="data">
+          <div className="book-data">
+            <span style={{display:'none'}}>
+              {id}
+            </span>
+            <span className="book-category">
+              {category}
+            </span>
+            <span className="book-title">
+            {title}
+            </span>
+          </div>
+          <div className="links">
+            <span>
+              <a href="#" onClick={this.handleRemoveBook} type="button">Remove</a>
+            </span>
+          </div>
+        </div>
       </div>
     );
   }

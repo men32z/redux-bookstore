@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab&display=swap');
-/*
-    font-family: 'Montserrat', ;
-    font-family: 'Roboto Slab', ;
-*/
+
+$blackT: #121212;
+$grayT: #e8e8e8;
 
 @mixin monse {
   font-family: 'Montserrat';
@@ -12,9 +11,33 @@
   line-height: normal;
 }
 
+@mixin roboto {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
 body {
   margin: 0;
   background-color: #fafafa;
+}
+
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+b {
+  font-weight: bold;
 }
 
 
@@ -47,7 +70,7 @@ body {
         @include monse;
         font-size: 13px;
         letter-spacing: 1.9px;
-        color: #121212;
+        color: $blackT;
         &:hover{
           opacity: 0.5;
         }
@@ -64,16 +87,64 @@ body {
   }
   height: 95px;
   background-color: #ffffff;
-  border-bottom: solid 2px #e8e8e8;
+  border-bottom: solid 2px $grayT;
 }
 
 .oval {
   width: 40px;
   height: 40px;
-  border: solid 2px #e8e8e8;
+  border: solid 2px $grayT;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
+}
+
+.book {
+  .data {
+    display: flex;
+    flex-direction: column;
+    .book-data {
+      display: flex;
+      flex-direction: column;
+    }
+    .links {
+      margin-top: auto;
+      a {
+        &:hover {
+          opacity: 1;
+        }
+        opacity: 0.6;
+        text-decoration: none;
+        @include roboto;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: normal;
+        color: #4386bf;
+      }
+    }
+  }
+  padding: 25px;
+  margin-top: 20px;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px $grayT;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-size: 14px;
+  @include monse;
+  color: $blackT;
+  margin-bottom: 10px;
+}
+.book-title {
+  font-size: 22px;
+  @include roboto;
+  letter-spacing: -0.2px;
+  color: $blackT;
 }

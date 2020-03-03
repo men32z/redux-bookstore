@@ -8,6 +8,7 @@ import rootReducer from './reducers';
 const getID = () => `_${Math.random().toString(36).substr(2, 9)}`;
 
 const defaultProps = {
+  filter: 'ALL',
   booksReducer: [
     { id: getID(), title: 'Little Prince', category: 'Action' },
     { id: getID(), title: 'Star Wars', category: 'History' },

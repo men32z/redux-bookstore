@@ -8,11 +8,14 @@ import CategoryFilter from '../components/CategoryFilter';
 const BookList = ({
   books, removeBook, filter, setFilter,
 }) => {
+  function handleFilterChange(e) {
+    setFilter(e.target.value);
+  }
   const booksMap = books.filter(x => filter === 'ALL' || x.category === filter)
     .map(x => (<Book key={x.id} removeBook={removeBook} book={x} />));
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <CategoryFilter setFilter={setFilter} filter={filter} />
+      <CategoryFilter handleFilterChange={handleFilterChange} filter={filter} />
       {booksMap}
     </div>
   );

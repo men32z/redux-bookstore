@@ -35,13 +35,16 @@ class BooksForm extends React.Component {
     const options = categories.map(x => <option key={x} value={x}>{x}</option>);
     const { title, category } = this.state;
     return (
-      <div>
+      <div className="books-form">
+        <h3 className="title-2">ADD NEW BOOK</h3>
         <form onSubmit={this.handleSubmit}>
-          <input id="title" onChange={this.handleChange} value={title} required />
-          <select id="category" onChange={this.handleChange} value={category}>
-            {options}
-          </select>
-          <button type="submit">Submit</button>
+          <div>
+            <input id="title" onChange={this.handleChange} value={title} required />
+            <select id="category" onChange={this.handleChange} value={category}>
+              {options}
+            </select>
+            <button type="submit">ADD BOOK</button>
+          </div>
         </form>
       </div>
     );

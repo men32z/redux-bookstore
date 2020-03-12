@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab&display=swap');
+
+$blackT: #121212;
+$grayT: #e8e8e8;
+
+@mixin monse {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin roboto {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin formField {
+  color: #888888;
+  padding-left: 15px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+b {
+  font-weight: bold;
+}
+
+
+.big-container {
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+  max-width: 1200px;
+}
+
+.header {
+  & > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    ul {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      width: 100%;
+      max-width: 200px;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        @include monse;
+        font-size: 13px;
+        letter-spacing: 1.9px;
+        color: $blackT;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .title {
+    width: 240px;
+    height: 37px;
+    @include monse;
+    font-size: 30px;
+    letter-spacing: normal;
+    color: #0290ff;
+  }
+  height: 95px;
+  background-color: #ffffff;
+  border-bottom: solid 2px $grayT;
+}
+
+.oval {
+  width: 40px;
+  height: 40px;
+  border: solid 2px $grayT;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.book {
+  .data {
+    display: flex;
+    flex-direction: column;
+    .book-data {
+      display: flex;
+      flex-direction: column;
+    }
+    .links {
+      margin-top: auto;
+      a {
+        &:hover {
+          opacity: 1;
+        }
+        opacity: 0.6;
+        text-decoration: none;
+        @include roboto;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: normal;
+        color: #4386bf;
+      }
+    }
+  }
+  padding: 25px;
+  margin-top: 20px;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px $grayT;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-size: 14px;
+  @include monse;
+  color: $blackT;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-size: 22px;
+  @include roboto;
+  letter-spacing: -0.2px;
+  color: $blackT;
+}
+
+.category-filter {
+  margin-left: auto;
+  margin-top: 15px;
+  select {
+    @include formField;
+  }
+}
+
+.line {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 100%;
+  height: 2px;
+  border: solid 1px #e8e8e8;
+}
+
+.title-2 {
+  @include monse;
+  font-size: 20px;
+  letter-spacing: -0.18px;
+  color: #888888;
+}
+
+.books-form {
+  display: flex;
+  flex-direction: column;
+  div {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    input {
+      @include formField;
+      width: 50%;
+    }
+    select {
+      @include formField;
+      width: 28%;
+      margin-left: 2%;
+    }
+    button {
+      width: 18%;
+      margin-left:2%;
+      height: 45px;
+      font-size: 13px;
+      @include roboto;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 3px;
+      background-color: #0290ff;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .header {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .oval {
+      position: absolute;
+      right: 5px;
+    }
+  }
+}

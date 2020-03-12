@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import rootReducer from './reducers';
+import './scss/style.scss';
 
 const getID = () => `_${Math.random().toString(36).substr(2, 9)}`;
 

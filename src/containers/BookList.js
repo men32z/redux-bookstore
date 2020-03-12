@@ -14,21 +14,9 @@ const BookList = ({
   const booksMap = books.filter(x => filter === 'ALL' || x.category === filter)
     .map(x => (<Book key={x.id} removeBook={removeBook} book={x} />));
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <CategoryFilter handleFilterChange={handleFilterChange} filter={filter} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksMap}
-        </tbody>
-      </table>
+      {booksMap}
     </div>
   );
 };

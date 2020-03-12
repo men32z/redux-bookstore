@@ -57,7 +57,7 @@ b {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 92%;
   max-width: 1200px;
 }
 
@@ -208,6 +208,21 @@ b {
       color: #ffffff;
       border-radius: 3px;
       background-color: #0290ff;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .header {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .oval {
+      position: absolute;
+      right: 5px;
     }
   }
 }

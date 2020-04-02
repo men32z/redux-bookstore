@@ -1,10 +1,10 @@
 # Redux Bookstore
+> An app where you can save, remove books set categories and list them with a filter, Built with React, Redux using local storage. 
 
 ![screenshot](https://raw.githubusercontent.com/men32z/redux-bookstore/development/docs/book2.png)
 
-## Project Specifications:
 
-In this project you will use React and Redux to build a very simple application. You will work in a real-world project for a fictional company that requires your help. The project has been split into multiple milestones, and each milestone has functional and technical requirements that you will need to implement.
+This project uses React and Redux to build a very simple application. The project has been split into multiple milestones, and each milestone has functional and technical requirements that was implemented.
 
 You can find the original project specification at: [here](https://github.com/microverseinc/project-redux-bookstore/blob/master/README.md)
 
@@ -28,10 +28,29 @@ npm start
 
 ## Built With:
 
-React, Redux, Javascript
+- React 
+- Redux 
+- Javascript
+- SCSS
 
 ## Author
-Luis Preza https://github.com/men32z
+
+👤 **Luis Preza**
+
+- Github: [@men32z](https://github.com/men32z)
+- Linkedin: [Luis Preza](https://www.linkedin.com/in/men32z/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/men32z/learning-tracker-app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -47,3 +66,9 @@ In the project directory, you can run:
 ### Deployment
 
 #### `npm run build` fails to minify
+
+
+### 📝 License
+
+MIT.
+

@@ -1,5 +1,5 @@
 # Redux Bookstore
-> An app where you can save, remove books set categories and list them with a filter, Built with React, Redux using local storage. 
+> An app that allows users to save and remove books, set categories/genres, and list books with a filter. Built with React and Redux using local storage.
 
 ![screenshot](https://raw.githubusercontent.com/men32z/redux-bookstore/development/docs/book2.png)
 

@@ -12,6 +12,13 @@ You can find the original project specification at: [here](https://github.com/mi
 
 [here](https://men32z-redux-bookstore.herokuapp.com/)
 
+## Upcoming Features
+As we have the basic create and remove functionality I have in the oven a list of upcoming features that are going to be tasty in this project.
+- Add Edit action to have the CRUD complete.
+- Add a CRUD for categories
+- Create a Back-end API to store the data
+- Create a proper profile to have a record of the time spent and books completed.
+
 ## Local Install
 
 ```sh
